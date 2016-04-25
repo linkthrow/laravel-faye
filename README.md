@@ -31,6 +31,10 @@ The package will automatically use the config file containing the list of banned
 
 ## Usage
 
+``` bash
+Faye::send("/channel1", array("name" => "foo"), array("token" => "456454sdqd"));
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
