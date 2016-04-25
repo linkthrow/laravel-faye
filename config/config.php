@@ -12,6 +12,6 @@ return [
     |
     */
 
-    "url" => 'http://127.0.0.1/faye'
+    "faye-url" => env('FAYE_URL', 'http://127.0.0.1/faye')
 
 ];
