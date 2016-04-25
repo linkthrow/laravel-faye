@@ -1,0 +1,6 @@
+suites:
+    profanity_filter_suite:
+        namespace: LinkThrow\ProfanityFilter
+        psr4_prefix: LinkThrow\ProfanityFilter
+        src_path: src
+        spec_prefix: spec
