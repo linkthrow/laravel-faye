@@ -24,7 +24,7 @@ $ composer require LinkThrow/laravel-faye
 Add ```LinkThrow\Faye\FayeServiceProvider::class``` to your providers array.
 
 If you wish to use the Facade then add 
-```'Profanity' => LinkThrow\Faye\Facades\Faye::class```
+```'Faye' => LinkThrow\Faye\Facades\Faye::class```
 
 The package will automatically use the config file containing the list of banned words. 
 
