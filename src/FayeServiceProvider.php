@@ -13,8 +13,9 @@ class FayeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $configPath = __DIR__ . '/../config/config.php';
-        $this->mergeConfigFrom($configPath, 'faye');
+        $this->publishes([
+            dirname(dirname(__FILE__)) . '/config/config.php' => config_path('faye.php')
+        ]);
     }
 
     /**
@@ -25,7 +26,7 @@ class FayeServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['faye'] = $this->app->share(function ($app) {
-            $url = $this->app['config']['url'];
+            $url = $this->app['config']['faye-url'];
             $adapter = new \Nc\FayeClient\Adapter\CurlAdapter();
             return new \Nc\FayeClient\Client($adapter, $url);
         });
