@@ -1,0 +1,44 @@
+{
+    "name": "linkthrow/laravel-faye",
+    "description": "Laravel FAYE wrapper for official PHP FAYE API",
+    "keywords": [
+        "laravel",
+        "faye",
+        "web sockets"
+    ],
+    "homepage": "https://github.com/linkthrow/laravel-faye",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hussan Choudhry",
+            "email": "hussan@uselinkthrow.com",
+            "homepage": "https://uselinkthrow.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.3.0"
+    },
+    "require-dev": {
+        "scrutinizer/ocular": "~1.1",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LinkThrow\\Faye\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LinkThrow\\Faye\\Test\\": "spec"
+        }
+    },
+    "scripts": {
+        "test": "phpspec"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
