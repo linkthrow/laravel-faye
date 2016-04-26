@@ -26,7 +26,7 @@ class FayeServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['faye'] = $this->app->share(function ($app) {
-            $url = $this->app['config']['faye-url'];
+            $url = $this->app['config']['faye']['faye-url'];
             $adapter = new \Nc\FayeClient\Adapter\CurlAdapter();
             return new \Nc\FayeClient\Client($adapter, $url);
         });
